@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js question task</title>
+
+    <style>
+         * {
+            box-sizing: border-box;
+        }
+        
+        
+        
+        .main 
+        {
+            height: 500px;
+            width: 50%;
+            
+            display: flex;
+            overflow: hidden;
+            border: 2px solid;
+        }
+        
+        .pa 
+        {
+            width: 50%;
+            border: 2px solid;
+            font-size: 35px;
+        }
+        
+        .qu
+        {
+            border: 1px solid;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button 
+        {
+            padding: 4px 14px;
+        }
+
+        .answer1 
+        {
+            height: 400px;
+            width: 101%;
+            
+            border: 2px solid;
+            position: absolute;
+            top: 0px;
+            left: 205%;
+            transition: 1s;
+        }
+
+
+        .qu1
+        {
+            position: relative;
+            border: 2px solid;
+            display: flex;
+            justify-content: space-between;
+        }
+        .qu3
+        {
+            position: relative;
+            border: 2px solid;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .answer2 
+        {
+            height: 400px;
+            width: 101%;
+            border: 2px solid;
+            
+            position: absolute;
+            top: -44px;
+            left: 206%;
+            transition: 1s;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="pa">
+            <div class="qu">
+                Question - 1
+                <button onclick="test()">^</button>
+                <div class="answer1"></div>
+            </div>
+            <!-- <div class="ch"> -->
+                <div class="qu1">
+                    Question - 2
+                    <button onclick="tested()">^</button>
+                    <div class="answer2"></div>
+                </div>
+            <!-- </div> -->
+
+            <!-- <div class="ch1"> -->
+                <div class="qu3">
+                    Question - 2
+                    <button onclick="tested()">^</button>
+                    <!-- <div class="answer2"></div> -->
+                </div>
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+    <script>
+        left = document.querySelector('.pa')
+        que1 = document.querySelector('.qu')
+        answ1 = document.querySelector('.answer1')
+
+        que11 = document.querySelector('.qu1')
+        answ11 = document.querySelector('.answer2')
+
+        cha = document.querySelector('.qu3')
+        cha11 = document.querySelector('.qu1')
+
+
+
+
+        function test() 
+        {
+            answ1.style.left = '101.2%'
+            answ11.style.left = '205%'
+            cha.style.visibility = 'visible'
+            cha11.style.visibility = 'hidden'
+        }
+        function tested() {
+            cha11.style.visibility = 'visible'
+            cha.style.visibility = 'hidden'
+            answ11.style.left = '102%'
+            answ1.style.left = '205%'
+            // qu2.style.top = '0px'
+        }
+    </script>
+    
+</body>
+</html>
